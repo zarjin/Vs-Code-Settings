@@ -4,6 +4,7 @@
   "editor.insertSpaces": true,
   "editor.detectIndentation": false,
   "editor.formatOnSave": true,
+  "security.workspace.trust.untrustedFiles": "open",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": "explicit"
@@ -18,13 +19,17 @@
   "editor.smoothScrolling": true,
   "editor.minimap.enabled": true,
   "editor.minimap.maxColumn": 80,
+  "editor.linkedEditing": true,
 
   // Intellisense Boost
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.preferences.importModuleSpecifier": "relative",
   "javascript.suggest.autoImports": true,
   "javascript.suggest.completeFunctionCalls": true,
-  "editor.linkedEditing": true,
+  "typescript.updateImportsOnFileMove.enabled": "always", // ✅ keep TS imports updated too
+  "typescript.preferences.importModuleSpecifier": "relative", // ✅ match JS behavior
+  "typescript.suggest.autoImports": true, // ✅ enable auto-imports for TS
+  "typescript.suggest.completeFunctionCalls": true, // ✅ auto-complete function calls in TS
 
   // Linting & Formatting
   "prettier.singleQuote": true,
@@ -32,18 +37,28 @@
   "prettier.trailingComma": "es5",
   "eslint.enable": true,
   "eslint.run": "onType",
-  "eslint.validate": ["javascript", "javascriptreact"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript", // ✅ ESLint support for TS
+    "typescriptreact" // ✅ ESLint support for TSX
+  ],
+
+  // Emmet in TSX/JSX
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "typescript": "typescriptreact" // ✅ enables Emmet in .tsx
+  },
 
   // Terminal UX
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "terminal.integrated.fontFamily": "MonaspiceNe Nerd Font",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "terminal.integrated.scrollback": 10000, //
+  "terminal.integrated.scrollback": 10000,
 
   // File & Search Optimization
   "files.exclude": {
-    "**/node_modules": true,
-    "**/dist": true
+    "**/node_modules": true
   },
   "search.exclude": {
     "**/node_modules": true,
@@ -59,7 +74,6 @@
 
   // UI & Theme Performance
   "workbench.colorTheme": "Hyper Term Theme",
-  "workbench.iconTheme": "vscode-icons",
   "workbench.activityBar.location": "top",
   "window.zoomLevel": 1.5,
   "window.title": "",
@@ -67,5 +81,15 @@
   "explorer.autoReveal": true,
   "workbench.panel.showLabels": false,
   "window.menuBarVisibility": "toggle",
-  "chat.commandCenter.enabled": false
+  "chat.commandCenter.enabled": false,
+  "workbench.iconTheme": "material-icon-theme",
+
+  // Error Lens Settings
+  "errorLens.enabled": true,
+  "errorLens.fontWeight": "bold",
+  "errorLens.fontSize": "14px",
+  "errorLens.gutterIconsEnabled": true,
+  "errorLens.onSave": true,
+  "errorLens.followCursor": "closestProblem",
+  "errorLens.messageTemplate": "$message"
 }
