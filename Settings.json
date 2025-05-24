@@ -12,47 +12,46 @@
   "editor.trimAutoWhitespace": true,
   "editor.wordWrap": "on",
   "editor.cursorSmoothCaretAnimation": "on",
-  "editor.bracketPairColorization.enabled": true,
-  "editor.fontFamily": "Fragment Mono",
+  "editor.guides.bracketPairs": "active",
+  "editor.guides.indentation": true,
+  "editor.fontFamily": "FiraCode Nerd Font",
   "editor.lineHeight": 1.75,
   "editor.fontLigatures": true,
   "editor.smoothScrolling": true,
   "editor.minimap.enabled": true,
   "editor.minimap.maxColumn": 80,
+  "editor.minimap.renderCharacters": false,
   "editor.linkedEditing": true,
+  "editor.parameterHints.enabled": true,
 
   // Intellisense Boost
   "javascript.updateImportsOnFileMove.enabled": "always",
   "javascript.preferences.importModuleSpecifier": "relative",
   "javascript.suggest.autoImports": true,
   "javascript.suggest.completeFunctionCalls": true,
-  "typescript.updateImportsOnFileMove.enabled": "always", // ✅ keep TS imports updated too
-  "typescript.preferences.importModuleSpecifier": "relative", // ✅ match JS behavior
-  "typescript.suggest.autoImports": true, // ✅ enable auto-imports for TS
-  "typescript.suggest.completeFunctionCalls": true, // ✅ auto-complete function calls in TS
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.suggest.autoImports": true,
+  "typescript.suggest.completeFunctionCalls": true,
 
   // Linting & Formatting
   "prettier.singleQuote": true,
   "prettier.semi": true,
   "prettier.trailingComma": "es5",
   "eslint.enable": true,
-  "eslint.run": "onType",
+  "eslint.run": "onSave",
   "eslint.validate": [
     "javascript",
     "javascriptreact",
-    "typescript", // ✅ ESLint support for TS
-    "typescriptreact" // ✅ ESLint support for TSX
+    "typescript",
+    "typescriptreact",
+    "html",
+    "css"
   ],
-
-  // Emmet in TSX/JSX
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact",
-    "typescript": "typescriptreact" // ✅ enables Emmet in .tsx
-  },
 
   // Terminal UX
   "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "terminal.integrated.fontFamily": "MonaspiceNe Nerd Font",
+  "terminal.integrated.fontFamily": "FiraCode Nerd Font",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.scrollback": 10000,
 
@@ -68,14 +67,12 @@
 
   // Git Streamline
   "git.autofetch": true,
+  "git.enableSmartCommit": true,
   "git.confirmSync": false,
   "scm.diffDecorations": "all",
   "git.openDiffOnClick": true,
-
-  // UI & Theme Performance
-  "workbench.colorTheme": "Hyper Term Theme",
   "workbench.activityBar.location": "top",
-  "window.zoomLevel": 1.5,
+  "window.zoomLevel": 1.75,
   "window.title": "",
   "breadcrumbs.enabled": false,
   "explorer.autoReveal": true,
@@ -83,6 +80,7 @@
   "window.menuBarVisibility": "toggle",
   "chat.commandCenter.enabled": false,
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.editor.splitInGroupLayout": "vertical",
 
   // Error Lens Settings
   "errorLens.enabled": true,
@@ -91,5 +89,11 @@
   "errorLens.gutterIconsEnabled": true,
   "errorLens.onSave": true,
   "errorLens.followCursor": "closestProblem",
-  "errorLens.messageTemplate": "$message"
+  "errorLens.messageTemplate": "$message",
+  "diffEditor.codeLens": true,
+
+  // Augments Settings
+  "augment.nextEdit.enableBackgroundSuggestions": false,
+  "augment.nextEdit.enableAutoApply": false,
+  "workbench.colorTheme": "After Dark No Italics"
 }
