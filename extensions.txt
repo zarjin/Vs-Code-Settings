@@ -1,0 +1,21 @@
+Extensions: [
+
+Auto Rename Tag
+Code Runner
+Code Spell Checker
+Color Highlight
+Container Tools
+Docker
+DotENV
+Error Lens
+ES7+ React/Redux Snippets
+ESLint
+GitLens
+Import Cost
+Live Server
+Material Icon Theme
+Path Intellisense
+Prettier - Code formatter
+Tailwind CSS IntelliSense
+
+]
