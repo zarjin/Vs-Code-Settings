@@ -2,8 +2,6 @@
   "window.title": "",
   "window.zoomLevel": 1,
   "window.menuBarVisibility": "toggle",
-  "window.commandCenter": false,
-  "workbench.statusBar.visible": false,
   "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "top",
   "workbench.startupEditor": "none",
@@ -11,7 +9,6 @@
   "workbench.panel.showLabels": false,
   "breadcrumbs.enabled": false,
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "Dark 2026",
 
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontSize": 14,
@@ -54,7 +51,7 @@
   "git.confirmSync": false,
   "git.rebaseWhenSync": true,
 
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "terminal.integrated.defaultProfile.windows": "PowerShell",
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.defaultLocation": "editor",
 
