@@ -1,96 +1,114 @@
 {
-  // ==========================================
-  // 1. Clean UI & Zen Layout
-  // ==========================================
+  // ─── Window & Workbench UI ────────────────────────────────────────────
+  "window.menuBarVisibility": "toggle",
   "window.title": "",
-  "window.zoomLevel": 1,
-  "workbench.startupEditor": "none",
-  "workbench.iconTheme": "material-icon-theme",
-  "breadcrumbs.enabled": false,
-
-  // Layout
   "workbench.activityBar.location": "top",
   "workbench.sideBar.location": "right",
-  "window.menuBarVisibility": "toggle",
-
-  // Explorer
-  "explorer.compactFolders": true,
-
-  // Minimal UI
-  "workbench.statusBar.visible": false,
   "workbench.panel.showLabels": false,
-  "workbench.layoutControl.enabled": false,
-  "window.commandCenter": false,
-  "workbench.browser.showInTitleBar": false,
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "workbench.list.smoothScrolling": true,
+  "workbench.editor.enablePreview": false,
+  "breadcrumbs.enabled": false,
 
-  // ==========================================
-  // 2. Performance & File Watching
-  // ==========================================
+  // ─── Editor: Typography & Visuals ─────────────────────────────────────
+  "editor.fontFamily": "JetBrainsMono Nerd Font, Cascadia Code, Consolas, monospace",
+  "editor.fontSize": 15,
+  "editor.lineHeight": 1.6,
+  "editor.fontLigatures": true,
+  "editor.wordWrap": "on",
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.guides.bracketPairs": true,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.smoothScrolling": true,
+  "editor.renderWhitespace": "selection",
+  "editor.renderLineHighlight": "all",
+  "editor.linkedEditing": true,
+  "editor.inlineSuggest.enabled": true,
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.detectIndentation": false,
+
+  // ─── Files & Formatting ───────────────────────────────────────────────
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 1000,
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  // ─── JavaScript / TypeScript ──────────────────────────────────────────
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
+
+  // ─── Git, GitLens & Copilot ───────────────────────────────────────────
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  "gitlens.graph.details.location": "auto",
+  "gitlens.openInTerminalLocation": "editor",
+  "chat.agent.maxRequests": 40,
+
+  // ─── Terminal ─────────────────────────────────────────────────────────
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font, Cascadia Code, Consolas, monospace",
+  "terminal.integrated.lineHeight": 1.2,
+  "terminal.integrated.smoothScrolling": true,
+  "terminal.integrated.scrollback": 10000,
+
+  // ─── Explorer, Diff & Security ────────────────────────────────────────
+  "explorer.confirmDelete": true,
+  "explorer.confirmDragAndDrop": true,
+  "explorer.compactFolders": false,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "security.workspace.trust.untrustedFiles": "prompt",
+
+  // ─── Hidden folders (Explorer only — still on disk / in Git) ──────────
+  "files.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/coverage": true,
+    "**/.turbo": true,
+    "**/.vercel": true,
+    "**/.cache": true,
+    "**/.vite": true
+  },
+
+  // ─── Search exclusions ────────────────────────────────────────────────
+  "search.exclude": {
+    "**/.git": true,
+    "**/node_modules": true,
+    "**/.next": true,
+    "**/dist": true,
+    "**/build": true,
+    "**/coverage": true,
+    "**/.turbo": true,
+    "**/.vercel": true,
+    "**/.cache": true,
+    "**/.vite": true
+  },
+
+  // ─── File watcher performance ────────────────────────────────────────
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
     "**/node_modules/**": true,
-    "**/dist/**": true,
     "**/.next/**": true,
-    "**/build/**": true
-  },
-
-  "search.useIgnoreFiles": true,
-  "search.followSymlinks": false,
-
-  // ==========================================
-  // 3. Typography & Editing Experience
-  // ==========================================
-  "editor.fontFamily": "JetBrainsMono Nerd Font",
-  "editor.fontLigatures": true,
-  "editor.fontSize": 14,
-  "editor.lineHeight": 22,
-
-  // Cursor
-  "editor.cursorBlinking": "smooth",
-  "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorStyle": "line-thin",
-  "editor.cursorWidth": 2,
-
-  // Smoothness
-  "editor.smoothScrolling": true,
-  "editor.minimap.enabled": false,
-  "editor.stickyScroll.enabled": false,
-
-  // Suggestions
-  "editor.quickSuggestionsDelay": 0,
-  "editor.inlineSuggest.enabled": true,
-
-  // ==========================================
-  // 4. Formatting & Code Quality
-  // ==========================================
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-
-  // File Cleanliness
-  "files.trimTrailingWhitespace": true,
-  "files.insertFinalNewline": true,
-  "files.eol": "\n",
-
-  // Auto Save
-  "files.autoSave": "afterDelay",
-  "files.autoSaveDelay": 1000,
-
-  // ==========================================
-  // 5. Git
-  // ==========================================
-  "git.enableSmartCommit": true,
-  "git.confirmSync": false,
-  "git.decorations.enabled": false,
-
-  // ==========================================
-  // 6. Terminal
-  // ==========================================
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
-  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-  "terminal.integrated.fontSize": 13
+    "**/dist/**": true,
+    "**/build/**": true,
+    "**/coverage/**": true,
+    "**/.turbo/**": true,
+    "**/.vercel/**": true,
+    "**/.cache/**": true,
+    "**/.vite/**": true
+  }
 }
